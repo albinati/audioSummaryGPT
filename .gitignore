@@ -1,0 +1,21 @@
+# Ignore Python build artifacts
+__pycache__/
+*.py[cod]
+
+# Ignore environment related files
+.env
+*.log
+
+# Ignore Python virtual environment
+venv/
+*.pyenv
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore output files
+/content/
+/output/
