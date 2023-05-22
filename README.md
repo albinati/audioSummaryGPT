@@ -7,8 +7,8 @@ This project uses OpenAI's GPT model and the Whisper ASR system to generate a su
 1. **Clone the repository**
 
     ```
-    git clone https://github.com/albinati/summaryGenerator.git
-    cd summaryGenerator
+    git clone https://github.com/albinati/audioSummaryGPT.git
+    cd audioSummaryGPT
     ```
 
 2. **Install the required Python libraries**
@@ -25,11 +25,11 @@ This project uses OpenAI's GPT model and the Whisper ASR system to generate a su
     # .env file
     OPENAI_KEY=your_openai_key
     INPUT_FOLDER=your_input_folder
-    AUDIO_FILE_PATH=your_audio_file_path
-    TRANSCRIPT_PATH=your_transcript_path
-    CONTENT_FOLDER=your_content_folder
+    AUDIO_FILENAME=your_audio_filename
     OUTPUT_FOLDER=your_output_folder
     OUTPUT_FILENAME=your_output_filename
+    TRANSCRIPT_FILENAME=your_transcript_filename
+    CHUNK_FILENAME=your_chunk_filename
     USER_PROMPT1=your_user_prompt1
     USER_PROMPT2=your_user_prompt2
     AI_ROLE=your_ai_role
@@ -47,7 +47,7 @@ This project uses OpenAI's GPT model and the Whisper ASR system to generate a su
     python transcriber.py
     ```
 
-    This will create a `transcript.txt` file and several `transcript_chunk*.txt` files in the input folder.
+    This will create a `transcript.txt` file in the output folder.
 
 2. **Generate the summary**
 
@@ -57,9 +57,8 @@ This project uses OpenAI's GPT model and the Whisper ASR system to generate a su
     python summarizer.py
     ```
 
-    This will create a `answers.txt` file in the output folder with the summary.
+    This will create a `summary.txt` and `summary_summarized.txt` files in the output folder with the summary.
 
 ## Notes
 
 The transcription and summary quality can be affected by the clarity of the audio and the specific GPT model you're using. The Whisper model is used for transcription, and GPT-3.5-Turbo or GPT-4 can be used for summary generation. The `.env` file should contain all the necessary configuration.
-
