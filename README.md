@@ -1,6 +1,6 @@
-# Podcast Summary Generator
+# Audio Summary Generator
 
-This project uses OpenAI's GPT model and the Whisper ASR system to generate a summary from a podcast audio file.
+This project uses OpenAI's GPT model and the Whisper ASR system to generate a summary from an audio file.
 
 ## Setup
 
@@ -39,9 +39,9 @@ This project uses OpenAI's GPT model and the Whisper ASR system to generate a su
 
 ## Usage
 
-1. **Transcribe the podcast**
+1. **Transcribe the audio**
 
-    Run the transcriber script to convert your podcast into text:
+    Run the transcriber script to convert your audio into text:
 
     ```bash
     python transcriber.py
