@@ -27,7 +27,7 @@ def transcribe():
     input_folder = os.getenv('INPUT_FOLDER')
     audio_filename = os.getenv('AUDIO_FILENAME')
     output_folder = os.getenv('OUTPUT_FOLDER')
-    transcript_filename = os.getenv('TRANSCRIPT_FILENAME') + '.txt'
+    transcript_filename = os.getenv('TRANSCRIPT_FILENAME')
 
     # Create output and content directory if it does not exist
     try:
@@ -54,7 +54,7 @@ def transcribe():
             print("Transcribing audio file. It might take a while.")
             result = model.transcribe(f'{input_folder}/{audio_filename}', verbose = True)
             transcribeText = result["text"]
-            with open(f'{output_folder}/{transcript_filename}', 'w') as f:
+            with open(f'{output_folder}/{transcript_filename}.txt', 'w') as f:
                 f.write(transcribeText)
         # If the transcript file exists, read its content
         else:

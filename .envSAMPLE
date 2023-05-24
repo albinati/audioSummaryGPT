@@ -1,0 +1,19 @@
+# Update with your OPENAI KEY
+OPENAI_KEY=[your-key]
+
+# Folder where your input files are located
+INPUT_FOLDER=./content
+AUDIO_FILENAME=file.wav
+
+# Summarizer Output Filename
+OUTPUT_FOLDER=./output
+OUTPUT_FILENAME=summary
+TRANSCRIPT_FILENAME=transcript
+CHUNK_FILENAME=chunk
+
+# ChatGPT Inputs (Make sure the prompt delivers what you want)
+USER_PROMPT1=Faça um resumo do arquivo em bullet points 
+USER_PROMPT2=Corrija possiveis erros na transcrição
+AI_ROLE=Você é um assistente expert em resumo de textos 
+GPT_MODEL=gpt-3.5-turbo
+GPT_TEMP=0.7 # 0.7 is the default
