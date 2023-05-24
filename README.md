@@ -22,19 +22,19 @@ This project uses OpenAI's GPT model and the Whisper ASR system to generate a su
     Create a `.env` file in the root of your project and fill it with your own values:
 
     ```dotenv
-    # .env file
-    OPENAI_KEY=your_openai_key
-    INPUT_FOLDER=your_input_folder
-    AUDIO_FILENAME=your_audio_filename
-    OUTPUT_FOLDER=your_output_folder
-    OUTPUT_FILENAME=your_output_filename
-    TRANSCRIPT_FILENAME=your_transcript_filename
-    CHUNK_FILENAME=your_chunk_filename
-    USER_PROMPT1=your_user_prompt1
-    USER_PROMPT2=your_user_prompt2
-    AI_ROLE=your_ai_role
-    GPT_MODEL=your_gpt_model (e.g. gpt-3.5-turbo)
-    GPT_TEMP=your_gpt_temp (e.g. 0.3)
+    # .env file    
+    OPENAI_KEY=[your-key]
+    INPUT_FOLDER=./content
+    AUDIO_FILENAME=file.wav
+    OUTPUT_FOLDER=./output
+    OUTPUT_FILENAME=summary
+    TRANSCRIPT_FILENAME=transcript
+    CHUNK_FILENAME=chunk
+    USER_PROMPT1=Faça um resumo do arquivo em bullet points 
+    USER_PROMPT2=Corrija possiveis erros na transcrição
+    AI_ROLE=Você é um assistente expert em resumo de textos 
+    GPT_MODEL=gpt-3.5-turbo
+    GPT_TEMP=0.7 #Default Temperature
     ```
 
 ## Usage
